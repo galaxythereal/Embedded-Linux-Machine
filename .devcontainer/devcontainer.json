@@ -1,0 +1,17 @@
+{
+  "name": "Embedded Linux Dev Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu", // Ubuntu Linux base
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode-remote.remote-containers",
+        "ms-python.python"
+      ]
+    }
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y build-essential gcc-arm-none-eabi qemu"
+}
